@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us</title>
+<script type="text/javascript">  
+function validateform(){  
+var emailid=document.myform2.email.value;  
+var fname=document.myform2.firstname.value;
+var lname=document.myform2.lastname.value;
+var comment=document.myform2.subject.value;
+var atposition=emailid.indexOf("@");  
+var dotposition=emailid.lastIndexOf("."); 
+
+if (fname==null || fname==""){  
+  alert("Please enter your firstname");  
+  return false;  
+}
+
+if (lname==null || lname==""){  
+   alert("Please enter Lastname");  
+   return false;
+
+} 
+if (emailid==null || emailid==""||atposition<1 || dotposition<atposition+2 || dotposition+2>=emailid.length){  
+  alert("Please enter a valid email-id");  
+  return false; 
+}
+if (comment==null || comment==""){  
+   alert("Please enter your query");  
+   return false;
+}
+}   
+</script>  
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body style="background-color:#9EA3A5;">
+<h1><center>We are here to help you<br><br></center></h1>
+<div class="container">
+  <form name="myform2" method="post" action="thank.html" onsubmit="return validateform()">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+
+    <label for="mail">E-mail</label>
+    <input type="text" id="email" name="email" placeholder="Your e-mail..">
+
+
+    
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+<style>
+
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 4px; 
+  margin-bottom: 10px; 
+  resize: vertical;
+}
+
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+</style>
+
+</body>
+</html>

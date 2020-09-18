@@ -1,0 +1,84 @@
+<!DOCTYPE html>  
+ <html>  
+ <head> 
+  <title>Account</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+</head>  
+<script type="text/javascript">  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.pass1.value;
+var firstpassword=document.myform.pass1.value;  
+var secondpassword=document.myform.pass2.value;   
+var add=document.myform.Address.value;
+var emailid=document.myform.email.value; 
+var atposition=emailid.indexOf("@");  
+var dotposition=emailid.lastIndexOf("."); 
+
+
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}
+if (emailid==null || emailid==""||atposition<1 || dotposition<atposition+2 || dotposition+2>=emailid.length){  
+  alert("Please enter a valid email-id");  
+  return false; 
+}
+
+if (add==null || add==""){  
+   alert("Please enter address");  
+   return false;
+}
+
+if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+}  
+
+if(firstpassword==secondpassword){  
+return true;  
+}  
+else{  
+alert("password must be same!");  
+return false;  
+}  
+
+
+}    
+</script>  
+<body style="background-color:#9EA3A5;">  
+    <center> <h2>New Account Registration form</h2>
+<div class="container">  
+   <center> <form name="myform" method="post" action="homelogin.html" onsubmit="return validateform()" >  
+     <fieldset>  
+        <legend>New Account</legend>  
+        <label><b>Name</b></label><br>
+        <input type="text" name="name"><br>  
+         <label><b>Email</b></label><br>
+         <input type="email" name="email"><br>
+         <label><b>Shipping Address</b></label><br>
+         <input type="text" size=60 name="Address"><br>  
+         <label><b>Password</b></label><br>
+         <input type="password" name="pass1"><br>
+         <label><b>Confirm Password</b></label><br> 
+         <input type="password" name="pass2"><br>  
+         <br><label><b>Gender</b></label> <br>
+         <input type="radio" id="gender" name="gender" value="male"/>Male  <br>  
+         <input type="radio" id="gender" name="gender" value="female"/>Female <br/> 
+           
+<center><input type="submit"></center> 
+<style>
+body{
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+</style>
+     </fieldset>  
+  </form> 
+</div>
+
+</html>  
