@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!-- XML demonstration -->
+
+<?xml-stylesheet type="text/css" href="style9.css"?>
+
+<!DOCTYPE sizechart>
+<sizechart>
+<shoe>
+<size>UK 3 -21.8 cm</size>
+</shoe>
+
+<shoe>
+<size>UK 4 -22.8 cm</size>
+</shoe>
+<shoe>
+<size>UK 5 -23.7 cm</size>
+</shoe>
+<shoe>
+<size>UK 6 -24.5 cm</size>
+</shoe>
+<shoe>
+<size>UK 7-25.4cm</size>
+</shoe>
+<shoe>
+<size>UK 8 -27.1 cm</size>
+</shoe>
+<shoe>
+<size>UK 9 -21.8 cm</size>
+</shoe>
+<shoe>
+<size>UK 10 -27.9 cm</size>
+</shoe>
+<shoe>
+<size>UK 11 -28.8 cm</size>
+</shoe>
+<shoe>
+<size>UK 12 -29.6 cm</size>
+</shoe>
+</sizechart>
