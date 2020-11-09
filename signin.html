@@ -1,0 +1,61 @@
+<html>
+<script type="text/javascript">  
+function validateform(){  
+var emailid=document.myform1.email.value;  
+var password=document.myform1.pass.value;
+var atposition=emailid.indexOf("@");  
+var dotposition=emailid.lastIndexOf(".");  
+
+if (emailid==null || emailid==""||atposition<1 || dotposition<atposition+2 || dotposition+2>=emailid.length){  
+  alert("Please enter a valid email-id");  
+  return false;  
+}
+
+if (password==null || password==""){  
+   alert("Please enter password");  
+   return false;
+}
+}    
+</script> 
+<script>
+function showTime(){
+var dt = new Date();
+document.getElementById("datetime").innerHTML = dt;
+}
+</script> 
+
+<body style="background-color:#9EA3A5;" onload=showTime();>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <center><h2>Sign in</h2><center><br>
+
+<center><form name="myform1" method="post" action="homelogin.html" onsubmit="return validateform()" >  
+     <fieldset>  
+      
+<legend>Login</legend>  
+    <label for="email"><b>Enter Email</b></label><br>  
+<input type="email" id="email" name="email"><br>  
+<label for="pass"><b>Enter Password</b></label><br>  
+<input type="Password" id="pass" name="pass">  
+<center><input type="submit"></center>   
+<center><b>New to Flyhigh?</b>  <a href="Account.html" class="btn">Click here to Sign up &#8594;</a></center> 
+<p>Date/Time: <span id="datetime"></span></p>
+<style>
+.btn{
+display:inline-block;
+background:#CFD1D3;
+padding:8px 30px;
+margin:30px 0;
+border-radius:30px;
+}
+body{
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding:0;
+box-sizing:border-box;
+}
+
+</style>
+</fieldset>  
+ </body>
+</html>
